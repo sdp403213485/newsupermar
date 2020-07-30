@@ -57,6 +57,22 @@ public class IntegralCalculateTest {
         assertEquals(1067,integral);
     }
 
+    //Demand c.2
+    @Test
+    public void should_return_3000_when_IntegralCalculate_given_TV_UserId_1() {
+        //given
+        Goods goods1 = new Goods( GoodsName.TV, 2000);
+        User user = new User(1);
+        IntegralCalculate integralCalculate = new IntegralCalculate();
+        List<Goods> shoppingList = Arrays.asList(goods1);
+
+        //when
+        int integral = integralCalculate.calculate(user,shoppingList);
+
+        //then
+        assertEquals(3000,integral);
+    }
+
 
 
 }

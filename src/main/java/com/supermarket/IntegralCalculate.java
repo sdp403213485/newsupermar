@@ -15,6 +15,12 @@ public class IntegralCalculate {
     public int calculate(User user, List<Goods> shoppingList) {
         int Integral = 0;
         for (Goods goods:shoppingList){
+            if (goods.getPrice() >= 1000 && PromotionalGoods.contains(goods.getGoodsName())){
+                Integral = goods.getPrice()-1000 + 1000 *2 ;
+                user.setIntegral(Integral);
+                continue;
+            }
+
             if (goods.getPrice() >= 1000){
                 Integral = (int)Math.floor((goods.getPrice()-1000) / 20) + 1000;
                 user.setIntegral(Integral);
