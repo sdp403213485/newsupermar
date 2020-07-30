@@ -5,7 +5,7 @@ public enum GoodsName {
         WATERMELON,
         BEEF,
         TV,
-        COLDBOX,
+        REFRIGERATOR,
         OTHER
 
 }
